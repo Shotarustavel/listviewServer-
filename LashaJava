@@ -1,0 +1,37 @@
+package com.example.kobinath.serveridanwamogeba;
+
+
+import java.io.Serializable;
+
+public class LashaJava  implements Serializable {
+
+    private String names, surName;
+
+
+    public LashaJava(String names, String surName) {
+        this.names = names;
+        this.surName = surName;
+
+
+    }
+    public String getNames() {
+        return names;
+    }
+
+    public void setNames(String names) {
+        this.names = names;
+    }
+
+    public String getSurName() {
+        return surName;
+    }
+
+    public void setsurName(String surName) {
+        this.surName = surName;
+    }
+
+
+
+
+
+}
