@@ -1,0 +1,88 @@
+package com.example.kobinath.serveridanwamogeba;
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+
+import android.widget.TextView;
+
+import java.util.ArrayList;
+
+public class GeolabAdapter extends BaseAdapter {
+
+    final ArrayList <LashaJava> students;
+    final Context context;
+
+
+
+    public GeolabAdapter(Context context , ArrayList <LashaJava> students) {
+        this.context = context;
+        this.students = students;
+
+    }
+
+    @Override
+    public int getCount() {
+        return students.size();
+    }
+
+    @Override
+    public Object getItem(int i) {
+        return students.get(i);
+    }
+
+    @Override
+    public long getItemId(int i) {
+        return i;
+    }
+
+    @Override
+    public View getView(int i, View view, ViewGroup viewGroup) {
+        View itemView;
+        ViewHolder holder ;
+
+
+
+        if (view == null){
+            itemView = View.inflate(context,R.layout.list_item_layout,null);
+
+            TextView nameView = itemView.findViewById(R.id.name);
+            TextView surNameView = itemView.findViewById(R.id.surName);
+
+
+            holder = new ViewHolder();
+
+            holder.nameView = nameView;
+            holder.surNameView =surNameView;
+
+
+            itemView.setTag(holder);
+
+        }else {
+            itemView = view;
+            holder = (ViewHolder) itemView.getTag();
+        }
+
+
+
+
+        LashaJava student = (LashaJava) getItem(i);
+
+
+        holder.nameView.setText(student.getNames());
+        holder.surNameView.setText(student.getSurName());
+
+
+        return itemView;
+    }
+
+
+    private static class ViewHolder {
+
+        TextView nameView,surNameView;
+
+
+
+    }
+
+}
