@@ -1,0 +1,14 @@
+package com.example.kobinath.serveridanwamogeba;
+
+import java.io.Serializable;
+
+public class Date implements Serializable {
+    public  static String []  names = {"ლაშა", "ლევანი","გიორგი","მამუკა","მინდია","გიორგი","მურადი","გელა","დათო"};
+
+    public  static String [] surName = {"სირაძე", "სირაძე","მარდალეიშვილი","ჯაბნიძე","მამუჭაძე","დობორჯგინიძე","მახარაძე","ხილაძე ","კახაძე"};
+
+
+
+
+
+}
