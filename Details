@@ -1,0 +1,32 @@
+package com.example.kobinath.serveridanwamogeba;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+
+import android.os.Bundle;
+
+import android.widget.TextView;
+
+
+public class Details extends AppCompatActivity {
+
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_details);
+
+        LashaJava  jhonsnov = (LashaJava ) getIntent().getExtras().getSerializable("character");
+
+        TextView nameView = findViewById(R.id.name11);
+        TextView custom  = findViewById(R.id.surName1);
+
+
+        nameView.setText(jhonsnov.getNames());
+        custom.setText(jhonsnov.getSurName());
+
+
+    }
+}
